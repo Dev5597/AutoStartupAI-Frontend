@@ -11,28 +11,26 @@ async function generateIdea() {
   try {
     const response = await fetch("http://127.0.0.1:8000/generate", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ skills })
     });
 
-    const result = await response.json();
+    const data = await response.json();
     loadingEl.classList.add("hidden");
 
-    if (result.output) {
-      typeWriterEffect(result.output, outputEl);
+    if (data.output) {
+      typeWriter(data.output, outputEl);
       outputEl.scrollIntoView({ behavior: "smooth" });
     } else {
-      outputEl.textContent = result.error || "Something went wrong!";
+      outputEl.textContent = data.error || "Failed to generate.";
     }
   } catch (err) {
     loadingEl.classList.add("hidden");
-    outputEl.textContent = "Error connecting to server.";
+    outputEl.textContent = "⚠️ Server error.";
   }
 }
 
-function typeWriterEffect(text, element) {
+function typeWriter(text, element) {
   let i = 0;
   element.textContent = "";
   const interval = setInterval(() => {
@@ -42,12 +40,9 @@ function typeWriterEffect(text, element) {
 }
 
 document.getElementById("theme-toggle").onclick = () => {
-  document.body.classList.toggle("light-mode");
+  document.body.classList.toggle("dark-mode");
 };
 
-// Simple placeholder for email subscription
-document.getElementById("subscribe-form").onsubmit = (e) => {
-  e.preventDefault();
-  const email = document.getElementById("email").value;
-  alert(`Subscribed with: ${email}`);
-};
+function subscribe() {
+  alert("Redirecting to Razorpay… (mock)");
+}

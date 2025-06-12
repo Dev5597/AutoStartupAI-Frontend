@@ -13,22 +13,21 @@
   </header>
 
   <main>
-    <label for="skills">Enter your skills:</label>
-    <textarea id="skills" placeholder="e.g. AI, Blockchain, Python"></textarea>
-    <button onclick="generateIdea()">Generate Startup Idea</button>
-    
-    <div id="loading" class="hidden">Generating idea...</div>
+    <div class="form-group">
+      <label for="skills">Enter your skills:</label>
+      <textarea id="skills" placeholder="e.g. AI, Blockchain, Python"></textarea>
+      <button onclick="generateIdea()">Generate Startup Idea</button>
+    </div>
+
+    <div id="loading" class="hidden">🔄 Generating idea...</div>
     <div id="output-container">
       <h2>Your Startup Idea:</h2>
       <div id="output" class="typewriter"></div>
     </div>
-    
-    <section class="subscribe-section">
-      <h2>💌 Subscribe for More</h2>
-      <form id="subscribe-form">
-        <input type="email" id="email" placeholder="Your email" required />
-        <button type="submit">Subscribe</button>
-      </form>
+
+    <section class="subscribe">
+      <h2>💳 Subscribe</h2>
+      <button onclick="subscribe()">Subscribe via Razorpay</button>
     </section>
   </main>
 

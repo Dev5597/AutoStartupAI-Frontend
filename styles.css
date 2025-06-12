@@ -2,8 +2,8 @@ body {
   font-family: 'Segoe UI', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #111;
-  color: #fff;
+  background-color: #fdfdfd;
+  color: #111;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
@@ -15,82 +15,74 @@ header {
 }
 
 .highlight {
-  color: #00d9ff;
+  color: #005eff;
 }
 
 main {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
+  padding: 1rem 2rem;
+}
+
+.form-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 textarea {
-  width: 100%;
-  height: 60px;
+  width: 250px;
+  height: 40px;
   padding: 0.5rem;
   font-size: 1rem;
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #555;
-  border-radius: 5px;
 }
 
 button {
-  margin-top: 1rem;
   padding: 0.5rem 1rem;
   font-weight: bold;
-  background-color: #00d9ff;
+  background-color: #005eff;
+  color: #fff;
   border: none;
-  border-radius: 5px;
+  border-radius: 4px;
   cursor: pointer;
 }
 
 button:hover {
-  background-color: #00aacc;
+  background-color: #0044cc;
 }
 
-#loading.hidden {
+#loading {
+  margin-top: 10px;
+}
+
+.hidden {
   display: none;
 }
 
 #output-container {
-  margin-top: 2rem;
+  margin-top: 20px;
 }
 
 #output {
+  margin-top: 10px;
   white-space: pre-line;
-  font-size: 1.1rem;
-  margin-top: 1rem;
+  font-size: 1rem;
 }
 
-.subscribe-section {
-  margin-top: 3rem;
+.subscribe {
+  margin-top: 30px;
 }
 
-.subscribe-section input[type="email"] {
-  padding: 0.5rem;
-  width: 70%;
-  max-width: 300px;
-  border: none;
-  border-radius: 5px;
+/* Dark mode */
+body.dark-mode {
+  background-color: #111;
+  color: #eee;
 }
 
-.subscribe-section button {
-  margin-left: 1rem;
+body.dark-mode textarea {
+  background-color: #222;
+  color: #eee;
 }
 
-/* Dark mode toggle */
-body.light-mode {
-  background-color: #f9f9f9;
-  color: #111;
-}
-
-body.light-mode textarea {
-  background-color: #fff;
-  color: #111;
-}
-
-body.light-mode button {
-  background-color: #007acc;
-  color: #fff;
+body.dark-mode button {
+  background-color: #00b0ff;
 }
