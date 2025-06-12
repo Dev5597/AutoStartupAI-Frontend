@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AutoStartupAI</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>🚀 <span class="highlight">AutoStartupAI</span></h1>
+    <button id="theme-toggle">🌙</button>
+  </header>
+
+  <main>
+    <label for="skills">Enter your skills:</label>
+    <textarea id="skills" placeholder="e.g. AI, Blockchain, Python"></textarea>
+    <button onclick="generateIdea()">Generate Startup Idea</button>
+    
+    <div id="loading" class="hidden">Generating idea...</div>
+    <div id="output-container">
+      <h2>Your Startup Idea:</h2>
+      <div id="output" class="typewriter"></div>
+    </div>
+    
+    <section class="subscribe-section">
+      <h2>💌 Subscribe for More</h2>
+      <form id="subscribe-form">
+        <input type="email" id="email" placeholder="Your email" required />
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
